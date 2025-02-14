@@ -1,5 +1,5 @@
 # Tahap-Tahap Instalasi
-## 1.Install Gazebo (DEV Version)
+## 1. Install Gazebo (DEV Version)
 1. Tambahkan repository Gazebo di Ubuntu
 ````
 sudo apt update
@@ -14,7 +14,32 @@ sudo apt install gazebo
 ````
 gazebo --version
 ````
-
+## 2. Install Plugin Ardupilot-Gazebo
+````
+cd Gazebo_SIM
+mkdir build
+cd build
+cmake ..
+make -j4
+sudo make install
+````
+````
+echo 'source /usr/share/gazebo/setup.sh' >> ~/.bashrc
+````
+````
+echo 'export GAZEBO_MODEL_PATH=~/ardupilot_gazebo/models' >> ~/.bashrc
+. ~/.bashrc
+````
+## 3. Run Simulation
+First Terminal
+````
+gazebo --verbose ~/ardupilot_gazebo/worlds/iris_arducopter_runway.world
+````
+Second Terminal (Sebelumnya harus sudah melakukan instalasi repository Ardupilot untuk SITL)
+````
+cd ~/ardupilot/ArduCopter/
+sim_vehicle.py -v ArduCopter -f gazebo-iris --console
+````
 
 
 # Deprecated : please use https://github.com/ArduPilot/ardupilot_gazebo
