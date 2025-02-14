@@ -1,3 +1,22 @@
+# Tahap-Tahap Instalasi
+## 1.Install Gazebo (DEV Version)
+1. Tambahkan repository Gazebo di Ubuntu
+````
+sudo apt update
+sudo apt install curl
+curl -sSL http://get.gazebosim.org | bash
+````
+2. Install Gazebo (Sesuai dengan Repository Ver.Ubuntu)
+````
+sudo apt install gazebo
+````
+3. Cek Versi Gazebo
+````
+gazebo --version
+````
+
+
+
 # Deprecated : please use https://github.com/ArduPilot/ardupilot_gazebo
 
 # Ardupilot Gazebo plugin 
