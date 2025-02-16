@@ -33,7 +33,7 @@ echo 'export GAZEBO_MODEL_PATH=~/Gazebo_SIM/models' >> ~/.bashrc
 ## 3. Run Simulation
 First Terminal
 ````
-gazebo --verbose ~/ardupilot_gazebo/worlds/iris_arducopter_runway.world
+gazebo --verbose ~/Gazebo_SIM/worlds/iris_arducopter_runway.world
 ````
 Second Terminal (Sebelumnya harus sudah melakukan instalasi repository Ardupilot untuk SITL)
 ````
