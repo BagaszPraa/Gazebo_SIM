@@ -27,7 +27,7 @@ sudo make install
 echo 'source /usr/share/gazebo/setup.sh' >> ~/.bashrc
 ````
 ````
-echo 'export GAZEBO_MODEL_PATH=~/ardupilot_gazebo/models' >> ~/.bashrc
+echo 'export GAZEBO_MODEL_PATH=~/Gazebo_SIM/models' >> ~/.bashrc
 . ~/.bashrc
 ````
 ## 3. Run Simulation
