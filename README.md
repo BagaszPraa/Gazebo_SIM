@@ -1,18 +1,19 @@
 # Tahap-Tahap Instalasi
-## 1. Install Gazebo (DEV Version)
-1. Tambahkan repository Gazebo di Ubuntu
+## 1. Install curl
 ````
-sudo apt update
-sudo apt install curl
-curl -sSL http://get.gazebosim.org | bash
+sudo apt-get update
+sudo apt-get install curl lsb-release gnupg
 ````
 2. Install Gazebo (Sesuai dengan Repository Ver.Ubuntu)
 ````
-sudo apt install gazebo
+sudo curl https://packages.osrfoundation.org/gazebo.gpg --output /usr/share/keyrings/pkgs-osrf-archive-keyring.gpg
+echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/pkgs-osrf-archive-keyring.gpg] http://packages.osrfoundation.org/gazebo/ubuntu-stable $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/gazebo-stable.list > /dev/null
+sudo apt-get update
+sudo apt-get install gz-harmonic
 ````
 3. Cek Versi Gazebo
 ````
-gazebo --version
+gz sim --versions
 ````
 ## 2. Install Plugin Ardupilot-Gazebo
 ````
