@@ -1,5 +1,5 @@
 # Tahap-Tahap Instalasi
-## 1. Install curl
+## 1. Install Gazebo-Sim (harmonic)
 ````
 sudo apt-get update
 sudo apt-get install curl lsb-release gnupg
